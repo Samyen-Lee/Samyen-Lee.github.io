@@ -41,7 +41,8 @@ function CompactSkillBar({ name, level, delay }: { name: string; level: number; 
 
 export default function Skills() {
   return (
-    <div className="h-full overflow-y-auto flex flex-col items-center px-4 md:px-6 max-w-6xl mx-auto w-full py-16">
+    <div className="h-full overflow-y-auto">
+    <div className="min-h-full flex flex-col items-center justify-center px-4 md:px-6 max-w-6xl mx-auto w-full py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -104,6 +105,7 @@ export default function Skills() {
           );
         })}
       </div>
+    </div>
     </div>
   );
 }
