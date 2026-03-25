@@ -2,11 +2,18 @@
 
 import { useRef, useEffect, useCallback } from "react";
 
-export default function DotGridWaveBg() {
+export default function DotGridWaveBg({ isVisible = true }: { isVisible?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
+  const lastFrameTime = useRef<number>(0);
 
   const draw = useCallback((time: number) => {
+    if (time - lastFrameTime.current < 33) {
+      animRef.current = requestAnimationFrame(draw);
+      return;
+    }
+    lastFrameTime.current = time;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -50,9 +57,11 @@ export default function DotGridWaveBg() {
   }, []);
 
   useEffect(() => {
-    animRef.current = requestAnimationFrame(draw);
+    if (isVisible) {
+      animRef.current = requestAnimationFrame(draw);
+    }
     return () => cancelAnimationFrame(animRef.current);
-  }, [draw]);
+  }, [draw, isVisible]);
 
   return (
     <canvas

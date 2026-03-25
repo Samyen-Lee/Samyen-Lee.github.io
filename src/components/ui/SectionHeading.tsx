@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "framer-motion";
 
 interface SectionHeadingProps {
@@ -7,7 +8,7 @@ interface SectionHeadingProps {
   subtitle?: string;
 }
 
-export default function SectionHeading({ title, subtitle }: SectionHeadingProps) {
+export default memo(function SectionHeading({ title, subtitle }: SectionHeadingProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -26,4 +27,4 @@ export default function SectionHeading({ title, subtitle }: SectionHeadingProps)
       )}
     </motion.div>
   );
-}
+});

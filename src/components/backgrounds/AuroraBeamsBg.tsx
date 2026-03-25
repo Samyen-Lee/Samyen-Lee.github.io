@@ -1,6 +1,6 @@
 "use client";
 
-export default function AuroraBeamsBg() {
+export default function AuroraBeamsBg({ isVisible: _isVisible = true }: { isVisible?: boolean }) {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="aurora-beam aurora-beam-1" />

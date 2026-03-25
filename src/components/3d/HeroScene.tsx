@@ -39,7 +39,7 @@ const waveFragmentShader = `
   }
 `;
 
-function WavePlane({ simplified }: { simplified: boolean }) {
+function WavePlane({ simplified, paused }: { simplified: boolean; paused: boolean }) {
   const matRef = useRef<THREE.ShaderMaterial>(null);
   const { pointer } = useThree();
 
@@ -54,7 +54,7 @@ function WavePlane({ simplified }: { simplified: boolean }) {
   );
 
   useFrame((state) => {
-    if (!matRef.current) return;
+    if (paused || !matRef.current) return;
     matRef.current.uniforms.uTime.value = state.clock.elapsedTime;
     if (!simplified) {
       const m = matRef.current.uniforms.uMouse.value as THREE.Vector2;
@@ -84,12 +84,12 @@ function WavePlane({ simplified }: { simplified: boolean }) {
   );
 }
 
-function GlassShape({ simplified }: { simplified: boolean }) {
+function GlassShape({ simplified, paused }: { simplified: boolean; paused: boolean }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const { pointer } = useThree();
 
   useFrame((state, delta) => {
-    if (!meshRef.current) return;
+    if (paused || !meshRef.current) return;
     meshRef.current.rotation.x += delta * 0.08;
     meshRef.current.rotation.y += delta * 0.12;
     if (!simplified) {
@@ -136,7 +136,7 @@ function GlassShape({ simplified }: { simplified: boolean }) {
   );
 }
 
-function SphereParticles({ count }: { count: number }) {
+function SphereParticles({ count, paused }: { count: number; paused: boolean }) {
   const points = useRef<THREE.Points>(null);
 
   const positions = useMemo(() => {
@@ -153,7 +153,7 @@ function SphereParticles({ count }: { count: number }) {
   }, [count]);
 
   useFrame((_, delta) => {
-    if (!points.current) return;
+    if (paused || !points.current) return;
     points.current.rotation.y += delta * 0.015;
     points.current.rotation.x += delta * 0.005;
   });
@@ -174,7 +174,7 @@ function SphereParticles({ count }: { count: number }) {
   );
 }
 
-export default function HeroScene() {
+export default function HeroScene({ paused = false }: { paused?: boolean }) {
   const isMobile = useIsMobile();
   const particleCount = isMobile ? 200 : 400;
 
@@ -189,13 +189,14 @@ export default function HeroScene() {
         dpr={[1, isMobile ? 1 : 1.5]}
         gl={{ antialias: !isMobile, alpha: true }}
         onCreated={onCreated}
+        frameloop={paused ? "demand" : "always"}
       >
         <ambientLight intensity={0.6} />
         <pointLight position={[10, 10, 10]} intensity={0.6} color="#3b82f6" />
         <pointLight position={[-8, -5, -5]} intensity={0.3} color="#60a5fa" />
-        <WavePlane simplified={isMobile} />
-        <GlassShape simplified={isMobile} />
-        <SphereParticles count={particleCount} />
+        <WavePlane simplified={isMobile} paused={paused} />
+        <GlassShape simplified={isMobile} paused={paused} />
+        <SphereParticles count={particleCount} paused={paused} />
       </Canvas>
     </div>
   );

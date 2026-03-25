@@ -1,8 +1,9 @@
 "use client";
 
+import { useRef, isValidElement, cloneElement, type ReactNode, type ReactElement } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import type { ReactNode } from "react";
+import { useSectionVisible } from "@/lib/hooks";
 
 interface FullpageSectionProps {
   id: string;
@@ -17,17 +18,26 @@ export default function FullpageSection({
   children,
   className,
 }: FullpageSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useSectionVisible(sectionRef);
+
+  const backgroundWithVisibility =
+    background && isValidElement(background)
+      ? cloneElement(background as ReactElement<{ isVisible?: boolean }>, { isVisible })
+      : background;
+
   return (
     <section
+      ref={sectionRef}
       id={id}
       className={cn(
         "relative h-screen w-full snap-start snap-always overflow-hidden",
         className
       )}
     >
-      {background && (
+      {backgroundWithVisibility && (
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {background}
+          {backgroundWithVisibility}
         </div>
       )}
 

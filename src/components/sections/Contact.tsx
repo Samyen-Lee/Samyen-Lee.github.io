@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "framer-motion";
 import GlassCard from "@/components/ui/GlassCard";
 import { profile } from "@/data/profile";
@@ -44,9 +45,11 @@ const socialLinks = [
   },
 ];
 
-export default function Contact() {
+const currentYear = new Date().getFullYear();
+
+export default memo(function Contact() {
   return (
-    <div className="h-full overflow-y-auto flex flex-col items-center justify-start py-16 md:justify-center md:py-0 px-6 max-w-4xl mx-auto w-full">
+    <div className="h-full overflow-y-auto flex flex-col items-center px-4 md:px-6 max-w-4xl mx-auto w-full py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -132,9 +135,9 @@ export default function Contact() {
         className="text-center mt-4 md:mt-8"
       >
         <p className="text-zinc-600 text-xs">
-          &copy; {new Date().getFullYear()} Samyen Lee Andriatiana. Construit avec Next.js, Three.js &amp; Framer Motion.
+          &copy;{' '}{currentYear}{' '}Samyen Lee Andriatiana. Construit avec Next.js, Three.js &amp; Framer Motion.
         </p>
       </motion.div>
     </div>
   );
-}
+});

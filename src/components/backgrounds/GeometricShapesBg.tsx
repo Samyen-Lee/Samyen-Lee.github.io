@@ -49,7 +49,7 @@ function Shape({ type, size }: { type: string; size: number }) {
   );
 }
 
-export default function GeometricShapesBg() {
+export default function GeometricShapesBg({ isVisible = true }: { isVisible?: boolean }) {
   return (
     <div className="absolute inset-0 overflow-hidden">
       {shapes.map((s, i) => (
@@ -57,11 +57,11 @@ export default function GeometricShapesBg() {
           key={i}
           className="absolute"
           style={{ left: s.x, top: s.y }}
-          animate={{
+          animate={isVisible ? {
             y: [0, -20, 10, -15, 0],
             x: [0, 10, -10, 5, 0],
             rotate: [0, 90, 180, 270, 360],
-          }}
+          } : undefined}
           transition={{
             duration: s.duration,
             repeat: Infinity,

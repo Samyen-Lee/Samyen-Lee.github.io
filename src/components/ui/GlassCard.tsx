@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
@@ -11,7 +12,7 @@ interface GlassCardProps {
   delay?: number;
 }
 
-export default function GlassCard({
+export default memo(function GlassCard({
   children,
   className,
   hover = true,
@@ -37,4 +38,4 @@ export default function GlassCard({
       {children}
     </motion.div>
   );
-}
+});

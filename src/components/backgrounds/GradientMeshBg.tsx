@@ -1,6 +1,6 @@
 "use client";
 
-export default function GradientMeshBg() {
+export default function GradientMeshBg({ isVisible: _isVisible = true }: { isVisible?: boolean }) {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="gradient-blob gradient-blob-1" />

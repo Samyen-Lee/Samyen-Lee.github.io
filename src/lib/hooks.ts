@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, type RefObject } from "react";
 
 export function useReducedMotion() {
   const [reduced, setReduced] = useState(false);
@@ -38,4 +38,22 @@ export function useLowPerformance() {
   }, []);
 
   return isLow;
+}
+
+export function useSectionVisible(ref: RefObject<HTMLElement | null>, rootMargin = "100px") {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { rootMargin, threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref, rootMargin]);
+
+  return isVisible;
 }

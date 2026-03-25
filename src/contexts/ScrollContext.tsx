@@ -6,6 +6,7 @@ import {
   useState,
   useCallback,
   useEffect,
+  useRef,
   type ReactNode,
 } from "react";
 import { navLinks } from "@/data/profile";
@@ -69,24 +70,33 @@ export function ScrollProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [scrollToNextSection, scrollToPrevSection]);
 
+  const scrollRaf = useRef<number>(0);
+
   useEffect(() => {
     if (!containerNode) return;
 
     const onScroll = () => {
-      const scrollTop = containerNode.scrollTop;
-      const viewportH = containerNode.clientHeight;
+      if (scrollRaf.current) return;
+      scrollRaf.current = requestAnimationFrame(() => {
+        scrollRaf.current = 0;
+        const scrollTop = containerNode.scrollTop;
+        const viewportH = containerNode.clientHeight;
 
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sectionIds[i]);
-        if (el && el.offsetTop <= scrollTop + viewportH * 0.4) {
-          setActiveSection(sectionIds[i]);
-          break;
+        for (let i = sectionIds.length - 1; i >= 0; i--) {
+          const el = document.getElementById(sectionIds[i]);
+          if (el && el.offsetTop <= scrollTop + viewportH * 0.4) {
+            setActiveSection(sectionIds[i]);
+            break;
+          }
         }
-      }
+      });
     };
 
     containerNode.addEventListener("scroll", onScroll, { passive: true });
-    return () => containerNode.removeEventListener("scroll", onScroll);
+    return () => {
+      containerNode.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(scrollRaf.current);
+    };
   }, [containerNode]);
 
   return (

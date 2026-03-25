@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import GlassCard from "@/components/ui/GlassCard";
@@ -34,9 +35,9 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 const statIcons = [HiCode, HiBriefcase, HiChip, HiOfficeBuilding];
 
-export default function About() {
+export default memo(function About() {
   return (
-    <div className="h-full overflow-y-auto flex flex-col items-center justify-start py-16 md:justify-center md:py-0 px-6 max-w-6xl mx-auto w-full">
+    <div className="h-full overflow-y-auto flex flex-col items-center px-4 md:px-6 max-w-6xl mx-auto w-full py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,4 +82,4 @@ export default function About() {
       </div>
     </div>
   );
-}
+});

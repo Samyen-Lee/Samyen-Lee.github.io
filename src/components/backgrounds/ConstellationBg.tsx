@@ -10,10 +10,11 @@ interface Star {
   r: number;
 }
 
-export default function ConstellationBg() {
+export default function ConstellationBg({ isVisible = true }: { isVisible?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
   const starsRef = useRef<Star[]>([]);
+  const lastFrameTime = useRef<number>(0);
 
   const init = useCallback(() => {
     const count = 60;
@@ -26,7 +27,13 @@ export default function ConstellationBg() {
     }));
   }, []);
 
-  const draw = useCallback(() => {
+  const draw = useCallback((time: number) => {
+    if (time - lastFrameTime.current < 33) {
+      animRef.current = requestAnimationFrame(draw);
+      return;
+    }
+    lastFrameTime.current = time;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -82,9 +89,14 @@ export default function ConstellationBg() {
 
   useEffect(() => {
     init();
-    animRef.current = requestAnimationFrame(draw);
+  }, [init]);
+
+  useEffect(() => {
+    if (isVisible) {
+      animRef.current = requestAnimationFrame(draw);
+    }
     return () => cancelAnimationFrame(animRef.current);
-  }, [init, draw]);
+  }, [draw, isVisible]);
 
   return (
     <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />

@@ -14,13 +14,14 @@ const HeroScene = dynamic(() => import("@/components/3d/HeroScene"), {
 });
 
 export default function Hero() {
-  const { scrollToSection } = useScrollContext();
+  const { scrollToSection, activeSection } = useScrollContext();
+  const isVisible = activeSection === "hero";
 
   return (
     <div className="relative h-full flex items-center justify-center">
       <Suspense fallback={null}>
         <div className="absolute inset-0 -z-10">
-          <HeroScene />
+          <HeroScene paused={!isVisible} />
         </div>
       </Suspense>
 
@@ -46,7 +47,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-zinc-400 text-base md:text-lg mb-10 max-w-2xl mx-auto"
           >
-            {profile.subtitle} — {profile.yearsOfExperience} ans d&apos;expérience
+            {profile.subtitle} — {profile.yearsOfExperience}{' '}ans d&apos;expérience
           </motion.p>
 
           <motion.div

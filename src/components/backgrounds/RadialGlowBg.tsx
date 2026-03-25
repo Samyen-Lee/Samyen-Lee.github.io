@@ -1,6 +1,6 @@
 "use client";
 
-export default function RadialGlowBg() {
+export default function RadialGlowBg({ isVisible: _isVisible = true }: { isVisible?: boolean }) {
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div className="radial-glow" />

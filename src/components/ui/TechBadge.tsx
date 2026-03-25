@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { cn } from "@/lib/utils";
 
 interface TechBadgeProps {
@@ -8,7 +9,7 @@ interface TechBadgeProps {
   size?: "sm" | "md";
 }
 
-export default function TechBadge({
+export default memo(function TechBadge({
   name,
   className,
   size = "sm",
@@ -24,4 +25,4 @@ export default function TechBadge({
       {name}
     </span>
   );
-}
+});

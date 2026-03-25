@@ -1,12 +1,13 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { education } from "@/data/profile";
 import { HiAcademicCap, HiLocationMarker } from "react-icons/hi";
 
-export default function Education() {
+export default memo(function Education() {
   return (
-    <div className="h-full overflow-y-auto flex flex-col items-center justify-start py-16 md:justify-center md:py-0 px-6 max-w-6xl mx-auto w-full">
+    <div className="h-full overflow-y-auto flex flex-col items-center px-4 md:px-6 max-w-6xl mx-auto w-full py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,4 +67,4 @@ export default function Education() {
       </div>
     </div>
   );
-}
+});
