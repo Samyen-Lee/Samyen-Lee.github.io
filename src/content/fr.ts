@@ -1,0 +1,377 @@
+import type { Content } from "./types";
+
+export const fr: Content = {
+  lang: "fr",
+  meta: {
+    title: "Samyen Lee Andriatiana — Software Engineer Fullstack .NET · React · IA",
+    description:
+      "Ingénieur logiciel fullstack basé à Antananarivo. 5 ans d’expérience sur .NET, React/Next.js et Java Spring dans des environnements corporate internationaux, avec un intérêt marqué pour l’IA générative.",
+  },
+  nav: [
+    { id: "about", label: "À propos" },
+    { id: "experience", label: "Parcours" },
+    { id: "projects", label: "Projets" },
+    { id: "expertise", label: "Expertise" },
+    { id: "education", label: "Formation" },
+    { id: "contact", label: "Contact" },
+  ],
+  ui: {
+    switchLabel: "EN",
+    switchHref: "/en/",
+    themeToggle: "Changer de thème",
+    openPalette: "Ouvrir la palette de commandes",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
+    backToTop: "Haut de page",
+    copyEmail: "Copier l’adresse",
+    copied: "Adresse copiée",
+    downloadCv: "Télécharger le CV",
+    viewSite: "Site de l’entreprise",
+    skipToContent: "Aller au contenu",
+  },
+  palette: {
+    placeholder: "Rechercher une section ou une action…",
+    empty: "Aucun résultat",
+    groups: { navigate: "Aller à", actions: "Actions", links: "Liens" },
+    actions: {
+      copyEmail: "Copier l’adresse e-mail",
+      downloadCv: "Télécharger le CV (PDF)",
+      toggleTheme: "Basculer clair / sombre",
+      switchLang: "View in English",
+      linkedin: "Profil LinkedIn",
+      github: "Profil GitHub",
+      email: "Écrire un e-mail",
+    },
+    hint: "pour naviguer",
+  },
+  hero: {
+    eyebrow: "Software Engineer · Fullstack",
+    before: "Je construis des applications web",
+    words: ["fiables", "maintenables", "évolutives", "intelligentes"],
+    after: ", du back-end .NET aux interfaces React.",
+    facts: ["5 ans d’expérience", ".NET · React · Java · IA générative"],
+    localTime: "Antananarivo",
+    status: "Ouvert aux opportunités",
+    currentLabel: "Actuellement",
+    ctaPrimary: "Voir mon parcours",
+    ctaSecondary: "Télécharger le CV",
+    scroll: "Défiler",
+  },
+  marquee: {
+    label: "Environnements",
+    items: [
+      "Conduent",
+      "Kyowa Kirin Hub",
+      "Astek Group",
+      "RAPP Indian Ocean",
+      "BICI Madagascar",
+      "ESTIA",
+      "IT University",
+    ],
+  },
+  about: {
+    label: "À propos",
+    title: "Un développeur fullstack à l’aise des deux côtés de l’API.",
+    paragraphs: [
+      "Depuis 2020, je conçois et maintiens des applications web et des systèmes d’entreprise pour des acteurs internationaux : Conduent, Kyowa Kirin Hub et BICI Madagascar. En tant que consultant au sein d’équipes Agile de 6 à 10 personnes, j’interviens du composant React au package PL/SQL, jusqu’à la mise en production.",
+      "Aujourd’hui, je travaille surtout en .NET et C# : intégrations de paiement, tests automatisés, pipelines Azure DevOps. En parallèle, je m’intéresse de près à l’IA générative (LLMs, LangChain, RAG), que j’ai mise en pratique en concevant un chatbot médical.",
+    ],
+    figures: [
+      { value: 5, suffix: "+", label: "années d’expérience en développement" },
+      { value: 3, label: "entreprises, dont 2 groupes internationaux" },
+      { value: 4, label: "écosystèmes : .NET, JavaScript, Java, Python" },
+      { value: 2, label: "masters : Data Science, Big Data et IA" },
+    ],
+    portraitAlt: "Portrait de Samyen Lee Andriatiana",
+  },
+  experience: {
+    label: "Parcours",
+    title: "Cinq ans de missions en environnement corporate.",
+    contextLabel: "Contexte",
+    teamLabel: "Équipe et méthode",
+    stackLabel: "Environnement technique",
+    items: [
+      {
+        id: "conduent",
+        company: "Conduent",
+        role: "Développeur .NET fullstack",
+        employer: "Consultant · Astek Group Madagascar",
+        period: "Juin 2024 — aujourd’hui",
+        summary:
+          "Maintenance et évolution des applications de Vente à Distance (VAD) : nouveaux modules, intégrations de paiement, tests et mises en production.",
+        context:
+          "Née en 2017 de la scission de Xerox, Conduent est spécialisée dans la gestion des processus métier (BPO) pour le transport, la santé, les services publics et financiers.",
+        groups: [
+          {
+            title: "Front-end",
+            items: [
+              "Interface de l’outil de test en VueJS",
+              "Intégration des moyens de paiement CPGS et Worldline (Angular)",
+              "Maintenance d’applications WPF et UWP",
+            ],
+          },
+          {
+            title: "Back-end",
+            items: [
+              "Tests unitaires (test cases) et tests automatisés (test plans)",
+              "Scripts SQL et PL/SQL, packages Oracle",
+              "Scripts de génération des médias d’installation",
+            ],
+          },
+          {
+            title: "DevOps",
+            items: [
+              "Création et mise à jour des scripts de déploiement",
+              "Versioning, build et release sur Azure DevOps (TFS)",
+              "Mises en production",
+            ],
+          },
+        ],
+        team: "6 à 8 personnes par affaire (chef de projet, tech lead, développeurs) · Agile, itérations et démos",
+        stack: [
+          "C#",
+          ".NET Core 8",
+          ".NET Framework 4.7.2",
+          "WPF",
+          "Angular",
+          "VueJS",
+          "REST",
+          "SOAP",
+          "Oracle",
+          "Azure DevOps",
+        ],
+        url: "https://www.conduent.com/",
+      },
+      {
+        id: "kki",
+        company: "Kyowa Kirin Hub",
+        role: "Développeur React / Next.js",
+        employer: "Consultant · RAPP Indian Ocean (Maurice)",
+        period: "Nov. 2021 — Juin 2024",
+        summary:
+          "Développement du site KKI Hub : composants React connectés au CMS, trois modes de connexion et trois niveaux d’accès aux contenus.",
+        context:
+          "KKI Hub est le centre de recherche et d’innovation affilié au laboratoire pharmaceutique Kyowa Kirin, dédié à la découverte de nouvelles thérapies.",
+        groups: [
+          {
+            title: "Front-end",
+            items: [
+              "Templates et composants React liés au CMS Acoustic",
+              "Logique d’accès aux contenus : deeplinks, accès temporaires",
+              "Pages responsive",
+            ],
+          },
+          {
+            title: "Back-end et environnements",
+            items: [
+              "Gestion des contenus dans le CMS Acoustic",
+              "Configuration des environnements dev, staging, prelive et prod",
+            ],
+          },
+        ],
+        team: "8 personnes (chef de projet, tech lead, QA, 3 développeurs, 2 intervenants anglophones) · Agile",
+        stack: ["JavaScript", "React", "Next.js", "Acoustic CMS", "Jira", "Bitbucket", "Figma"],
+        url: "https://www.kyowakirinhub.com/en-gb",
+      },
+      {
+        id: "bici",
+        company: "BICI Madagascar",
+        role: "Développeur fullstack Java",
+        employer: "Consultant",
+        period: "Nov. 2020 — Nov. 2021",
+        summary:
+          "Développement de back-offices métier intégrant gestion de stock, gestion des fournisseurs et facturation, de l’interface à la base de données.",
+        context:
+          "BICI Madagascar est une société de services informatiques : développement logiciel sur mesure, conception de sites web, hébergement et graphisme.",
+        groups: [
+          {
+            title: "Front-end",
+            items: [
+              "Pages CRUD : saisie, listes avec recherche avancée et pagination, rapports",
+              "Communication temps réel JavaScript ↔ Java par sockets",
+            ],
+          },
+          {
+            title: "Back-end",
+            items: ["Import de données", "Logique métier", "Maintenance applicative"],
+          },
+        ],
+        team: "10 personnes (chef de projet, 3 QA, 6 développeurs) · Agile",
+        stack: ["Java", "Spring", "JSP", "Sockets", "Oracle", "PostgreSQL", "Git"],
+        url: "https://www.bici.mg/page/",
+      },
+    ],
+  },
+  projects: {
+    label: "Projets",
+    title: "Quelques réalisations, expliquées.",
+    roleLabel: "Mon rôle",
+    githubCta: "Voir mon GitHub",
+    items: [
+      {
+        id: "madasante",
+        title: "MadaSanté",
+        kicker: "Chatbot médical propulsé par un LLM",
+        period: "2023 · Projet de fin d’études",
+        role: "Conception, architecture et développement complet, en binôme",
+        summary:
+          "Un assistant conversationnel spécialisé en santé. Il répond à partir de documents médicaux, de sources web et d’une base de données, propose des pistes à partir des symptômes et sensibilise à la prévention.",
+        points: [
+          "Mémoire conversationnelle avec LangChain",
+          "RAG : embeddings et VectorStore pour ancrer les réponses dans les documents",
+          "Fusion de sources hétérogènes : web, documents, base de données",
+          "Prompts personnalisés et format de réponse normalisé",
+        ],
+        stack: ["Python", "FastAPI", "LangChain", "OpenAI API", "React", "PostgreSQL", "SQLite"],
+        visual: "rag",
+        visualTitle: "Le parcours d’une question",
+        visualCaption: "Cliquez sur une étape pour l’explorer.",
+        steps: [
+          { label: "Question", detail: "L’utilisateur décrit ses symptômes ou pose une question de santé." },
+          { label: "Mémoire", detail: "LangChain réinjecte l’historique pour garder le fil de la conversation." },
+          { label: "Embeddings", detail: "La question est vectorisée pour permettre une recherche sémantique." },
+          { label: "VectorStore", detail: "Les passages les plus pertinents des documents médicaux sont retrouvés." },
+          { label: "Contexte", detail: "Documents, sources web et base de données sont fusionnés dans un prompt." },
+          { label: "LLM", detail: "Le modèle OpenAI génère une réponse dans un format normalisé." },
+        ],
+      },
+      {
+        id: "kkihub",
+        title: "KKI Hub",
+        kicker: "Contenus médicaux à accès contrôlé",
+        period: "2021 — 2024 · Kyowa Kirin Hub",
+        role: "Développeur front-end React / Next.js",
+        summary:
+          "Le site combine trois modes de connexion et trois niveaux d’accès. J’ai implémenté la logique qui décide quels contenus chaque visiteur peut voir, y compris via des liens profonds et des accès temporaires.",
+        points: [
+          "Connexions OneKey, DocCheck et SelfCert",
+          "Niveaux d’accès hiérarchisés A < B < C",
+          "Deeplinks et accès temporaires",
+          "Templates React pilotés par le CMS Acoustic",
+        ],
+        stack: ["React", "Next.js", "JavaScript", "Acoustic CMS", "Figma"],
+        visual: "access",
+        visualTitle: "Le modèle d’accès",
+        visualCaption: "Illustration simplifiée : choisissez un niveau.",
+      },
+      {
+        id: "vad",
+        title: "Vente à Distance",
+        kicker: "Paiements et chaîne de livraison",
+        period: "2024 — aujourd’hui · Conduent",
+        role: "Développeur .NET fullstack",
+        summary:
+          "Faire évoluer des applications critiques sans casser l’existant : nouveaux modules, intégration de prestataires de paiement, et une chaîne de tests et de déploiement maîtrisée jusqu’à la production.",
+        points: [
+          "Intégration des paiements CPGS et Worldline",
+          "Tests unitaires, de non-régression et d’intégration",
+          "Scripts de déploiement et médias d’installation",
+          "Build, release et mise en production sur Azure DevOps",
+        ],
+        stack: ["C#", ".NET Core 8", "Angular", "VueJS", "Oracle", "Azure DevOps"],
+        visual: "delivery",
+        visualTitle: "Du commit à la production",
+        visualCaption: "Chaque évolution passe par toutes les étapes.",
+        steps: [
+          { label: "Développement", detail: "" },
+          { label: "Tests unitaires", detail: "" },
+          { label: "Non-régression", detail: "" },
+          { label: "Intégration", detail: "" },
+          { label: "Build et release", detail: "" },
+          { label: "Production", detail: "" },
+        ],
+      },
+    ],
+    access: {
+      levelLabel: "Niveau d’accès",
+      loginLabel: "Connexion via",
+      content: "Contenus",
+      locked: "Verrouillé",
+      unlocked: "Accessible",
+      extras: "Deeplinks et accès temporaires ouvrent un contenu ciblé sans changer de niveau.",
+    },
+    rag: {
+      question: "« J’ai de la fièvre et mal à la gorge depuis trois jours. »",
+      answer: "Réponse structurée : causes possibles, conseils, quand consulter.",
+      replay: "Rejouer",
+    },
+    delivery: { replay: "Rejouer" },
+  },
+  expertise: {
+    label: "Expertise",
+    title: "Des stacks variées, une même exigence.",
+    timelineTitle: "Stack principale au fil du temps",
+    now: "aujourd’hui",
+    rows: [
+      { label: "Java · Spring", where: "BICI Madagascar", from: "2020-11", to: "2021-11" },
+      { label: "React · Next.js", where: "Kyowa Kirin Hub", from: "2021-11", to: "2024-06" },
+      { label: "Python · LLM", where: "MadaSanté", from: "2023-01", to: "2023-12" },
+      { label: ".NET · C#", where: "Conduent", from: "2024-06", to: null },
+    ],
+    groups: [
+      { title: "Langages", items: ["C#", "JavaScript", "TypeScript", "Java", "Python", "SQL · PL/SQL"] },
+      { title: "Front-end", items: ["React", "Next.js", "Angular", "VueJS", "WPF · UWP"] },
+      {
+        title: "Back-end",
+        items: ["ASP.NET Core MVC · API", "Entity Framework", "Spring", "Node.js", "FastAPI · Flask", "REST · SOAP"],
+      },
+      { title: "Données", items: ["SQL Server", "PostgreSQL", "Oracle", "SQLite"] },
+      {
+        title: "DevOps et outils",
+        items: ["Azure Pipelines", "GitLab CI/CD", "Docker", "Kubernetes", "Git · TFS · Bitbucket", "Jira · Confluence"],
+      },
+      {
+        title: "IA générative",
+        items: ["LLMs · OpenAI", "LangChain", "RAG", "VectorStore · embeddings", "Prompt engineering"],
+      },
+    ],
+    methodsTitle: "Façon de travailler",
+    methods: [
+      "Agile et Scrum : daily, sprint planning, démos, rétrospectives",
+      "Estimation des charges et plannings réalistes",
+      "Code modulaire et évolutif : design patterns, principes SOLID",
+      "Documentation : spécifications, rapports de test, API (Swagger)",
+      "Gestion des incidents : debugging, analyse post-mortem",
+      "Collaboration transverse avec le métier, l’UX/UI et l’infra",
+    ],
+  },
+  education: {
+    label: "Formation",
+    title: "Data, IA et génie logiciel.",
+    items: [
+      {
+        period: "2022 — 2023",
+        degree: "Master 2 of Science, Big Data Intelligence for Human Augmented Reality (BIHAR)",
+        school: "ESTIA, France",
+        details: ["Cybersécurité", "Blockchain", "AR/VR", "Intelligence artificielle"],
+      },
+      {
+        period: "2021 — 2022",
+        degree: "Master 1 Data Science",
+        school: "IT University, Antananarivo",
+      },
+      {
+        period: "2017 — 2020",
+        degree: "Bachelor of Computer Science, spécialité développement d’applications web",
+        school: "IT University, Antananarivo",
+      },
+    ],
+    languagesTitle: "Langues",
+    languages: [
+      { name: "Français", level: "Courant" },
+      { name: "Anglais", level: "Technique" },
+    ],
+  },
+  contact: {
+    label: "Contact",
+    title: "Un projet, une mission ?",
+    titleEmphasis: "Parlons-en.",
+    text: "Pour une mission, un poste ou simplement échanger autour d’un projet, écrivez-moi.",
+    emailLabel: "E-mail",
+    elsewhere: "Ailleurs",
+  },
+  footer: {
+    built: "Conçu et développé avec Next.js et Tailwind CSS.",
+    hint: "pour tout parcourir",
+  },
+};

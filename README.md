@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Samyen Lee Andriatiana
 
-## Getting Started
+Site personnel bilingue (FR / EN), direction « éditoriale » : Next.js 16 (export statique), React 19, Tailwind CSS 4, TypeScript.
 
-First, run the development server:
+## Lancer en local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir http://localhost:3000 (version anglaise : http://localhost:3000/en/).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Modifier le contenu
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tout le texte est dans `src/content/` — aucune modification de composant n'est nécessaire :
 
-## Learn More
+| Fichier | Contenu |
+| --- | --- |
+| `src/content/fr.ts` | Textes en français (hero, parcours, projets, compétences, formation…) |
+| `src/content/en.ts` | Les mêmes textes en anglais |
+| `src/content/site.ts` | E-mail, liens LinkedIn / GitHub, URL du site, chemin du CV et de la photo |
 
-To learn more about Next.js, take a look at the following resources:
+Les fichiers à remplacer se trouvent dans `public/` : `portrait.jpg` (photo) et `samyen-lee-cv.pdf` (CV téléchargeable).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Fonctionnalités
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Palette de commandes `Ctrl K` / `⌘K` : navigation, copie de l'e-mail, CV, thème, langue
+- Thème clair / sombre (préférence système par défaut, mémorisée ensuite)
+- Visuels interactifs : pipeline RAG de MadaSanté, modèle d'accès KKI Hub, chaîne de livraison Conduent
+- Frise des stacks dans le temps, parcours en accordéon, compteurs animés
+- SEO : métadonnées FR/EN avec `hreflang`, image Open Graph générée, sitemap, données structurées `Person`
+- Accessibilité : navigation clavier, lien d'évitement, respect de `prefers-reduced-motion`
 
-## Deploy on Vercel
+## Construire et déployer
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le site statique est généré dans `out/`. Le workflow `.github/workflows/deploy.yml` publie automatiquement sur GitHub Pages à chaque push sur `main` (activer « GitHub Actions » comme source dans Settings → Pages du dépôt).
+
+Si le site est servi ailleurs que sur `https://samyen-lee.github.io`, mettre à jour `url` dans `src/content/site.ts`.
