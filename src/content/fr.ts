@@ -81,7 +81,7 @@ export const fr: Content = {
       { value: 5, suffix: "+", label: "années d’expérience en développement" },
       { value: 3, label: "entreprises, dont 2 groupes internationaux" },
       { value: 4, label: "écosystèmes : .NET, JavaScript, Java, Python" },
-      { value: 2, label: "masters : Data Science, Big Data et IA" },
+      { value: 6, label: "années d’études supérieures en informatique, jusqu’au master Big Data et IA" },
     ],
     portraitAlt: "Portrait de Samyen Lee Andriatiana",
   },
@@ -350,7 +350,7 @@ export const fr: Content = {
       },
       {
         period: "2021 — 2022",
-        degree: "Master 1 Data Science",
+        degree: "Master 1 Computer Science",
         school: "IT University, Antananarivo",
       },
       {
