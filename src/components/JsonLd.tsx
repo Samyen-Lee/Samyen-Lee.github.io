@@ -15,7 +15,7 @@ export function JsonLd({ content }: { content: Content }) {
     sameAs: [site.linkedin, site.github],
     knowsAbout: [".NET", "C#", "React", "Next.js", "Java Spring", "LangChain", "RAG", "Azure DevOps"],
     alumniOf: [
-      { "@type": "CollegeOrUniversity", name: "ESTIA" },
+      { "@type": "CollegeOrUniversity", name: "ESTIA — École Supérieure des Technologies Industrielles Avancées" },
       { "@type": "CollegeOrUniversity", name: "IT University" },
     ],
   };

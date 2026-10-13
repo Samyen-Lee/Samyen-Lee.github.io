@@ -87,6 +87,7 @@ export interface Content {
     facts: string[];
     localTime: string;
     status: string;
+    workModes: string;
     currentLabel: string;
     ctaPrimary: string;
     ctaSecondary: string;

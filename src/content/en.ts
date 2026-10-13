@@ -52,6 +52,7 @@ export const en: Content = {
     facts: ["5 years of experience", ".NET · React · Java · Generative AI"],
     localTime: "Antananarivo",
     status: "Open to opportunities",
+    workModes: "On-site · Hybrid · Remote",
     currentLabel: "Currently",
     ctaPrimary: "See my experience",
     ctaSecondary: "Download résumé",
@@ -146,7 +147,7 @@ export const en: Content = {
         id: "kki",
         company: "Kyowa Kirin Hub",
         role: "React / Next.js Developer",
-        employer: "Consultant · RAPP Indian Ocean (Mauritius)",
+        employer: "Consultant · RAPP Indian Ocean",
         period: "Nov 2021 — June 2024",
         summary:
           "Building the KKI Hub website: CMS-driven React components, three sign-in methods and three content access levels.",
@@ -333,6 +334,8 @@ export const en: Content = {
       "Documentation: specifications, test reports, APIs (Swagger)",
       "Incident handling: debugging, post-mortem analysis",
       "Cross-functional work with business, UX/UI and infrastructure",
+      "Process optimisation",
+      "Preventive and corrective measures: backlog, regular reviews",
     ],
   },
   education: {

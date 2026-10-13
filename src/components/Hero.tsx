@@ -12,9 +12,10 @@ export function Hero({ content }: { content: Content }) {
     <section id="top" className="relative flex min-h-[100svh] flex-col">
       <div className="mx-auto flex w-full max-w-[1320px] flex-1 flex-col px-5 pb-10 pt-28 sm:px-8 lg:px-12 lg:pt-36">
         <div className="flex flex-wrap items-start justify-between gap-6">
-          <p className="rise flex items-center gap-3 text-[14px] text-ink-2" style={{ "--rise-delay": "100ms" } as React.CSSProperties}>
+          <p className="rise flex flex-wrap items-center gap-x-3 gap-y-1 text-[14px] text-ink-2" style={{ "--rise-delay": "100ms" } as React.CSSProperties}>
             <span className="pulse-dot inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
             {hero.status}
+            <span className="text-ink-3">{hero.workModes}</span>
           </p>
           <div
             className="rise hidden max-w-[260px] border-l border-line pl-4 md:block"
