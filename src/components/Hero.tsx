@@ -7,6 +7,7 @@ import { RotatingWord } from "./RotatingWord";
 export function Hero({ content }: { content: Content }) {
   const { hero, lang } = content;
   const current = content.experience.items[0];
+  const [, trailingPunctuation, rest] = hero.after.match(/^(\S*)([\s\S]*)$/)!;
 
   return (
     <section id="top" className="relative flex min-h-[100svh] flex-col">
@@ -40,8 +41,13 @@ export function Hero({ content }: { content: Content }) {
             className="rise display mt-6 block max-w-[20ch] text-[clamp(2.9rem,6.6vw,7rem)] leading-[0.95]"
             style={{ "--rise-delay": "350ms" } as React.CSSProperties}
           >
-            {hero.before} <RotatingWord words={hero.words} />
-            {hero.after}
+            {hero.before}{" "}
+            {/* Keeps trailing punctuation on the same line as the rotating word */}
+            <span className="whitespace-nowrap">
+              <RotatingWord words={hero.words} />
+              {trailingPunctuation}
+            </span>
+            {rest}
           </span>
         </h1>
 

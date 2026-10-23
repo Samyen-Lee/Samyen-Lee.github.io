@@ -1,10 +1,8 @@
-import { Instrument_Serif, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Inter_Tight, JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
 
-export const serif = Instrument_Serif({
+export const display = Schibsted_Grotesk({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
+  variable: "--font-schibsted-grotesk",
   display: "swap",
 });
 

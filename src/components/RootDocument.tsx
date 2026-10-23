@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { mono, sans, serif } from "@/app/fonts";
+import { display, mono, sans } from "@/app/fonts";
 import { InlineScript } from "./InlineScript";
 import type { Lang } from "@/content/types";
 import "@/app/globals.css";
@@ -11,7 +11,7 @@ export function RootDocument({ lang, children }: { lang: Lang; children: ReactNo
     <html
       lang={lang}
       data-theme="light"
-      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <head>

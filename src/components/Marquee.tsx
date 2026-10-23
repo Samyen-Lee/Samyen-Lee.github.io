@@ -6,12 +6,10 @@ export function Marquee({ content }: { content: Content }) {
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {items.map((item) => (
         <li key={item} className="flex items-center">
-          <span className="display whitespace-nowrap px-8 text-[clamp(2rem,4vw,3.25rem)] italic text-ink-2 transition-colors hover:text-ink">
+          <span className="display whitespace-nowrap px-8 text-[clamp(2rem,4vw,3.25rem)] font-medium text-ink-2 transition-colors hover:text-ink">
             {item}
           </span>
-          <span className="text-accent" aria-hidden="true">
-            ✦
-          </span>
+          <span className="h-2 w-2 shrink-0 bg-accent" aria-hidden="true" />
         </li>
       ))}
     </ul>

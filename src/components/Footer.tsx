@@ -16,7 +16,7 @@ export function Footer({ content }: { content: Content }) {
             <kbd className="rounded border border-paper/30 px-1.5 py-0.5 font-mono text-[11px] text-paper">Ctrl K</kbd>
             {footer.hint}
           </p>
-          <a href="#top" className="inline-flex items-center gap-2 text-paper transition-colors hover:text-accent">
+          <a href="#top" className="inline-flex items-center gap-2 text-paper transition-colors hover:text-accent-inverse">
             {ui.backToTop}
             <ArrowUp size={14} />
           </a>

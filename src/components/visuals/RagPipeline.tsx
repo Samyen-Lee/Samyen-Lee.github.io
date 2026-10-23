@@ -35,7 +35,7 @@ export function RagPipeline({
 
   return (
     <div ref={ref}>
-      <p className="display text-[1.45rem] italic leading-snug text-ink">{question}</p>
+      <p className="display text-[1.45rem] font-medium leading-snug text-ink">{question}</p>
 
       <div className="relative mt-6">
         <span aria-hidden="true" className="absolute bottom-6 left-[15px] top-6 w-px bg-line-strong" />

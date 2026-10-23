@@ -15,12 +15,12 @@ export function Contact({ content }: { content: Content }) {
     <section id="contact" className="bg-ink text-paper">
       <div className="mx-auto max-w-[1320px] px-5 py-24 sm:px-8 lg:px-12 lg:py-36">
         <p className="label border-t border-paper/20 pt-6 text-paper/60" data-reveal>
-          <span className="text-accent">06</span> — {contact.label}
+          <span className="text-accent-inverse">06</span> — {contact.label}
         </p>
 
         <h2 className="display mt-10 max-w-[16ch] text-[clamp(3.25rem,9vw,8.5rem)] leading-[0.95]" data-reveal>
           {contact.title}{" "}
-          <em className="whitespace-nowrap text-accent">{contact.titleEmphasis}</em>
+          <em className="whitespace-nowrap not-italic text-accent-inverse">{contact.titleEmphasis}</em>
         </h2>
         <p className="mt-8 max-w-[46ch] text-[clamp(1.1rem,1.5vw,1.3rem)] leading-relaxed text-paper/70" data-reveal>
           {contact.text}
@@ -32,7 +32,7 @@ export function Contact({ content }: { content: Content }) {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href={`mailto:${site.email}`}
-                className="display bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 text-[clamp(1.6rem,4.2vw,3.5rem)] leading-tight transition-[background-size,color] duration-700 ease-out-expo [overflow-wrap:anywhere] hover:bg-[length:100%_1px] hover:text-accent"
+                className="display bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1 text-[clamp(1.6rem,4.2vw,3.5rem)] leading-tight transition-[background-size,color] duration-700 ease-out-expo [overflow-wrap:anywhere] hover:bg-[length:100%_1px] hover:text-accent-inverse"
               >
                 {site.email}
               </a>
@@ -49,7 +49,7 @@ export function Contact({ content }: { content: Content }) {
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noreferrer" : undefined}
-                    className="group flex items-center gap-3 py-4 text-[16px] transition-colors hover:text-accent"
+                    className="group flex items-center gap-3 py-4 text-[16px] transition-colors hover:text-accent-inverse"
                   >
                     {link.icon}
                     <span className="flex-1">{link.label}</span>

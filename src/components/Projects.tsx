@@ -48,7 +48,7 @@ export function Projects({ content }: { content: Content }) {
               <h3 id={`project-${project.id}`} className="display mt-6 text-[clamp(2.75rem,5vw,4.5rem)]">
                 {project.title}
               </h3>
-              <p className="display mt-2 text-[clamp(1.4rem,2.2vw,1.9rem)] italic text-ink-2">{project.kicker}</p>
+              <p className="display mt-2 text-[clamp(1.4rem,2.2vw,1.9rem)] font-medium text-ink-2">{project.kicker}</p>
               <p className="mt-6 text-[16px] leading-relaxed text-ink-2">{project.summary}</p>
 
               <p className="mt-6 text-[14px]">

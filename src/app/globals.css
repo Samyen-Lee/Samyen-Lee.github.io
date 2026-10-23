@@ -3,32 +3,35 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  --paper: #f4f2ec;
-  --paper-2: #ebe8df;
-  --paper-3: #e2ded3;
-  --ink: #141414;
-  --ink-2: #4f4c45;
-  --ink-3: #807b70;
-  --line: #d6d1c5;
-  --line-strong: #bdb7a9;
-  --accent: #c2410c;
-  --accent-ink: #fff7f2;
-  --accent-soft: #f6dccd;
+  --paper: #f5f7fa;
+  --paper-2: #eceff4;
+  --paper-3: #e1e6ed;
+  --ink: #0b0f17;
+  --ink-2: #465063;
+  --ink-3: #737d8f;
+  --line: #d8dee7;
+  --line-strong: #b7c0cd;
+  --accent: #2340d8;
+  --accent-ink: #ffffff;
+  --accent-soft: #dce3fc;
+  /* Accent for blocks set on --ink, which is dark in light mode */
+  --accent-inverse: #7d95ff;
   color-scheme: light;
 }
 
 :root[data-theme="dark"] {
-  --paper: #11100e;
-  --paper-2: #1a1916;
-  --paper-3: #24221e;
-  --ink: #eeebe4;
-  --ink-2: #aaa59a;
-  --ink-3: #78736a;
-  --line: #2c2a26;
-  --line-strong: #403d37;
-  --accent: #f07a45;
-  --accent-ink: #1a0a03;
-  --accent-soft: #3a2014;
+  --paper: #0a0d12;
+  --paper-2: #11151c;
+  --paper-3: #191e27;
+  --ink: #e7ebf1;
+  --ink-2: #9fa8b7;
+  --ink-3: #6c7586;
+  --line: #222832;
+  --line-strong: #343c49;
+  --accent: #7d95ff;
+  --accent-ink: #060a1c;
+  --accent-soft: #19224a;
+  --accent-inverse: #2340d8;
   color-scheme: dark;
 }
 
@@ -44,8 +47,9 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-accent-soft: var(--accent-soft);
+  --color-accent-inverse: var(--accent-inverse);
   --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-display: var(--font-schibsted-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -79,34 +83,22 @@ body {
   border-radius: 4px;
 }
 
-/* Grain texture that keeps the paper from looking flat */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  pointer-events: none;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+/* In the components layer so Tailwind utilities can override them */
+@layer components {
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
 
-:root[data-theme="dark"] body::before {
-  opacity: 0.05;
-}
-
-.label {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-}
-
-.display {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1;
+  .display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
 }
 
 /* Scroll reveal: content stays visible without JavaScript */

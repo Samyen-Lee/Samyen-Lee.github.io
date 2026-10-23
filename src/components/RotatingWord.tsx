@@ -12,7 +12,7 @@ export function RotatingWord({ words, interval = 2600 }: { words: string[]; inte
   }, [words.length, interval]);
 
   return (
-    <span className="italic text-accent">
+    <span className="text-accent">
       <span key={index} className="word-in">
         {words[index]}
       </span>
