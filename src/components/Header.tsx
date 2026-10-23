@@ -72,7 +72,7 @@ export function Header({ content }: { content: Content }) {
           }}
           className="group flex items-baseline gap-2 text-[15px] font-medium tracking-tight"
         >
-          <span className="display text-2xl transition-colors group-hover:text-accent">Samyen Lee</span>
+          <span className="display whitespace-nowrap text-2xl transition-colors group-hover:text-accent">Samyen Lee</span>
           <span className="label hidden sm:inline">Andriatiana</span>
         </a>
 

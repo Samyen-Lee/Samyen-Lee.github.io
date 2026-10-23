@@ -38,7 +38,7 @@ export function Hero({ content }: { content: Content }) {
             {site.name} — {hero.eyebrow}
           </span>
           <span
-            className="rise display mt-6 block max-w-[20ch] text-[clamp(2.9rem,6.6vw,7rem)] leading-[0.95]"
+            className="rise display mt-6 block max-w-[20ch] text-[min(clamp(2.9rem,6.6vw,7rem),12.5vw)] leading-[0.95]"
             style={{ "--rise-delay": "350ms" } as React.CSSProperties}
           >
             {hero.before}{" "}
