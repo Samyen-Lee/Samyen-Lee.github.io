@@ -5,7 +5,7 @@ export const fr: Content = {
   meta: {
     title: "Samyen Lee Andriatiana — Software Engineer Fullstack .NET · React · IA",
     description:
-      "Ingénieur logiciel fullstack basé à Antananarivo. 5 ans d’expérience sur .NET, React/Next.js et Java Spring dans des environnements corporate internationaux, avec un intérêt marqué pour l’IA générative.",
+      "Ingénieur logiciel fullstack basé à Antananarivo. 6 ans d’expérience sur .NET, React/Next.js et Java Spring dans des environnements corporate internationaux, avec un intérêt marqué pour l’IA générative.",
   },
   nav: [
     { id: "about", label: "À propos" },
@@ -49,7 +49,7 @@ export const fr: Content = {
     before: "Je construis des applications web",
     words: ["fiables", "maintenables", "évolutives", "intelligentes"],
     after: ", du back‑end .NET aux interfaces React.",
-    facts: ["5 ans d’expérience", ".NET · React · Java · IA générative"],
+    facts: ["6 ans d’expérience", ".NET · React · Java · IA générative"],
     localTime: "Antananarivo",
     status: "Ouvert aux opportunités",
     workModes: "Sur site · Hybride · À distance",
@@ -61,7 +61,8 @@ export const fr: Content = {
   marquee: {
     label: "Environnements",
     items: [
-      "Conduent",
+      "Controlperfect",
+      "Novvan (ex-Conduent)",
       "Kyowa Kirin Hub",
       "Astek Group",
       "RAPP Indian Ocean",
@@ -74,12 +75,12 @@ export const fr: Content = {
     label: "À propos",
     title: "Un développeur fullstack à l’aise des deux côtés de l’API.",
     paragraphs: [
-      "Depuis 2020, je conçois et maintiens des applications web et des systèmes d’entreprise pour des acteurs internationaux : Conduent, Kyowa Kirin Hub et BICI Madagascar. En tant que consultant au sein d’équipes Agile de 6 à 10 personnes, j’interviens du composant React au package PL/SQL, jusqu’à la mise en production.",
-      "Aujourd’hui, je travaille surtout en .NET et C# : intégrations de paiement, tests automatisés, pipelines Azure DevOps. En parallèle, je m’intéresse de près à l’IA générative (LLMs, LangChain, RAG), que j’ai mise en pratique en concevant un chatbot médical.",
+      "Depuis 2020, je conçois et maintiens des applications web et des systèmes d’entreprise pour des acteurs internationaux : Controlperfect, Novvan (ex-Conduent), Kyowa Kirin Hub et BICI Madagascar. En tant que consultant au sein d’équipes Agile de 6 à 10 personnes, j’interviens du composant React au package PL/SQL, jusqu’à la mise en production.",
+      "Aujourd’hui, je travaille en .NET et C# chez Novvan (intégrations de paiement, tests automatisés, pipelines Azure DevOps) et, en freelance, sur la refonte en Vue.js d’une application canadienne, en développement agentique avec Claude Code. Je m’intéresse aussi de près à l’IA générative (LLMs, LangChain, RAG), que j’ai mise en pratique en concevant un chatbot médical.",
     ],
     figures: [
-      { value: 5, suffix: "+", label: "années d’expérience en développement" },
-      { value: 3, label: "entreprises, dont 2 groupes internationaux" },
+      { value: 6, label: "années d’expérience en développement" },
+      { value: 4, label: "entreprises, dont 2 groupes internationaux" },
       { value: 4, label: "écosystèmes : .NET, JavaScript, Java, Python" },
       { value: 6, label: "années d’études supérieures en informatique, jusqu’au master Big Data et IA" },
     ],
@@ -87,21 +88,49 @@ export const fr: Content = {
   },
   experience: {
     label: "Parcours",
-    title: "Cinq ans de missions en environnement corporate.",
+    title: "Six ans de missions en environnement corporate.",
     contextLabel: "Contexte",
     teamLabel: "Équipe et méthode",
     stackLabel: "Environnement technique",
     items: [
       {
+        id: "controlperfect",
+        company: "Controlperfect",
+        role: "Développeur fullstack / Vue.js",
+        employer: "Freelance · full remote",
+        period: "Mai 2026 — aujourd’hui",
+        summary:
+          "Refonte complète du front de l’application en Vue.js, en binôme avec le lead dev, en s’appuyant sur l’automatisation et le développement agentique avec Claude Code.",
+        context:
+          "Fondée en 2016 à Boucherville (Québec), Controlperfect édite une suite logicielle de gestion de la sécurité corporative et des activités : inspections, rapports d’incidents, gestion des visiteurs et des clés, applications mobiles.",
+        groups: [
+          {
+            title: "Front-end",
+            items: [
+              "Refonte complète de l’application en Vue.js",
+              "Binôme avec le lead dev Vue.js",
+              "Collaboration avec l’équipe back-end .NET",
+            ],
+          },
+          {
+            title: "IA et automatisation",
+            items: ["Développement agentique avec Claude Code", "Automatisation du développement"],
+          },
+        ],
+        team: "Binôme front avec le lead dev Vue.js · 2 développeurs back-end .NET",
+        stack: ["Vue.js", ".NET", "Claude Code"],
+        url: "https://www.controlperfect.com/",
+      },
+      {
         id: "conduent",
-        company: "Conduent",
+        company: "Novvan (ex-Conduent)",
         role: "Développeur .NET fullstack",
         employer: "Consultant · Astek Group Madagascar",
         period: "Juin 2024 — aujourd’hui",
         summary:
           "Maintenance et évolution des applications de Vente à Distance (VAD) : nouveaux modules, intégrations de paiement, tests et mises en production.",
         context:
-          "Née en 2017 de la scission de Xerox, Conduent est spécialisée dans la gestion des processus métier (BPO) pour le transport, la santé, les services publics et financiers.",
+          "Née en 2017 de la scission de Xerox, Conduent est spécialisée dans la gestion des processus métier (BPO) pour le transport, la santé, les services publics et financiers. Son activité de billettique pour le transport public est devenue Novvan, au sein du groupe Modaxo, en octobre 2026.",
         groups: [
           {
             title: "Front-end",
@@ -127,6 +156,10 @@ export const fr: Content = {
               "Mises en production",
             ],
           },
+          {
+            title: "IA",
+            items: ["Développement assisté par IA avec Cursor, licence fournie par Novvan"],
+          },
         ],
         team: "6 à 8 personnes par affaire (chef de projet, tech lead, développeurs) · Agile, itérations et démos",
         stack: [
@@ -140,17 +173,18 @@ export const fr: Content = {
           "SOAP",
           "Oracle",
           "Azure DevOps",
+          "Cursor",
         ],
         url: "https://www.conduent.com/",
       },
       {
         id: "kki",
         company: "Kyowa Kirin Hub",
-        role: "Développeur React / Next.js",
+        role: "Développeur React / Next.js et .NET",
         employer: "Consultant · RAPP Indian Ocean",
         period: "Nov. 2021 — Juin 2024",
         summary:
-          "Développement du site KKI Hub : composants React connectés au CMS, trois modes de connexion et trois niveaux d’accès aux contenus.",
+          "Développement du site KKI Hub : composants React connectés au CMS, API .NET, trois modes de connexion et trois niveaux d’accès aux contenus.",
         context:
           "KKI Hub est le centre de recherche et d’innovation affilié au laboratoire pharmaceutique Kyowa Kirin, dédié à la découverte de nouvelles thérapies.",
         groups: [
@@ -166,23 +200,25 @@ export const fr: Content = {
           {
             title: "Back-end et environnements",
             items: [
+              "API REST en .NET consommées par le front React / Next.js",
+              "Logique serveur des connexions OneKey, DocCheck, SelfCert et des niveaux d’accès",
               "Gestion des contenus dans le CMS Acoustic",
               "Configuration des environnements dev, staging, prelive et prod",
             ],
           },
         ],
         team: "8 personnes (chef de projet, tech lead, QA, 3 développeurs, 2 intervenants anglophones) · Agile",
-        stack: ["JavaScript", "React", "Next.js", "Redux", "Acoustic CMS", "Jira", "Bitbucket", "Figma"],
+        stack: ["JavaScript", "React", "Next.js", "Redux", "C#", ".NET", "Acoustic CMS", "Jira", "Bitbucket", "Figma"],
         url: "https://www.kyowakirinhub.com/en-gb",
       },
       {
         id: "bici",
         company: "BICI Madagascar",
-        role: "Développeur fullstack Java",
+        role: "Développeur fullstack Java, .NET et React",
         employer: "Consultant",
         period: "Nov. 2020 — Nov. 2021",
         summary:
-          "Développement de back-offices métier intégrant gestion de stock, gestion des fournisseurs et facturation, de l’interface à la base de données.",
+          "Développement de back-offices métier (Java, .NET et React) intégrant gestion de stock, gestion des fournisseurs et facturation, de l’interface à la base de données.",
         context:
           "BICI Madagascar est une société de services informatiques : développement logiciel sur mesure, conception de sites web, hébergement et graphisme.",
         groups: [
@@ -190,12 +226,13 @@ export const fr: Content = {
             title: "Front-end",
             items: [
               "Pages CRUD : saisie, listes avec recherche avancée et pagination, rapports",
+              "Interfaces React des back-offices",
               "Communication temps réel JavaScript ↔ Java par sockets",
             ],
           },
           {
             title: "Back-end",
-            items: ["Import de données", "Logique métier", "Maintenance applicative"],
+            items: ["Import de données", "API .NET des modules stock, fournisseurs et facturation", "Logique métier", "Maintenance applicative"],
           },
           {
             title: "Recherche Elasticsearch (projet Cemedi)",
@@ -206,7 +243,7 @@ export const fr: Content = {
           },
         ],
         team: "10 personnes (chef de projet, 3 QA, 6 développeurs) · Agile",
-        stack: ["Java", "Spring", "JSP", "Sockets", "Oracle", "PostgreSQL", "Elasticsearch", "Logstash", "Kibana", "Git"],
+        stack: ["Java", "Spring", "JSP", "C#", ".NET", "React", "Sockets", "Oracle", "PostgreSQL", "Elasticsearch", "Logstash", "Kibana", "Git"],
         url: "https://www.bici.mg/page/",
       },
     ],
@@ -249,7 +286,7 @@ export const fr: Content = {
         title: "KKI Hub",
         kicker: "Contenus médicaux à accès contrôlé",
         period: "2021 — 2024 · Kyowa Kirin Hub",
-        role: "Développeur front-end React / Next.js",
+        role: "Développeur React / Next.js et .NET",
         summary:
           "Le site combine trois modes de connexion et trois niveaux d’accès. J’ai implémenté la logique qui décide quels contenus chaque visiteur peut voir, y compris via des liens profonds et des accès temporaires.",
         points: [
@@ -257,8 +294,9 @@ export const fr: Content = {
           "Niveaux d’accès hiérarchisés A < B < C",
           "Deeplinks et accès temporaires",
           "Templates React pilotés par le CMS Acoustic",
+          "API REST et back-end des connexions en .NET",
         ],
-        stack: ["React", "Next.js", "JavaScript", "Acoustic CMS", "Figma"],
+        stack: ["React", "Next.js", "JavaScript", ".NET", "Acoustic CMS", "Figma"],
         visual: "access",
         visualTitle: "Le modèle d’accès",
         visualCaption: "Illustration simplifiée : choisissez un niveau.",
@@ -267,7 +305,7 @@ export const fr: Content = {
         id: "vad",
         title: "Vente à Distance",
         kicker: "Paiements et chaîne de livraison",
-        period: "2024 — aujourd’hui · Conduent",
+        period: "2024 — aujourd’hui · Novvan (ex-Conduent)",
         role: "Développeur .NET fullstack",
         summary:
           "Faire évoluer des applications critiques sans casser l’existant : nouveaux modules, intégration de prestataires de paiement, et une chaîne de tests et de déploiement maîtrisée jusqu’à la production.",
@@ -312,10 +350,11 @@ export const fr: Content = {
     timelineTitle: "Stack principale au fil du temps",
     now: "aujourd’hui",
     rows: [
+      { label: ".NET · C#", where: "BICI · Kyowa Kirin Hub · Novvan", from: "2020-11", to: null },
+      { label: "React · Next.js", where: "BICI · Kyowa Kirin Hub", from: "2020-11", to: "2024-06" },
       { label: "Java · Spring", where: "BICI Madagascar", from: "2020-11", to: "2021-11" },
-      { label: "React · Next.js", where: "Kyowa Kirin Hub", from: "2021-11", to: "2024-06" },
       { label: "Python · LLM", where: "MadaSanté", from: "2023-01", to: "2023-12" },
-      { label: ".NET · C#", where: "Conduent", from: "2024-06", to: null },
+      { label: "Vue.js", where: "Novvan · Controlperfect", from: "2024-06", to: null },
     ],
     groups: [
       { title: "Langages", items: ["C#", "JavaScript", "TypeScript", "Java", "Python", "SQL · PL/SQL"] },
@@ -331,7 +370,7 @@ export const fr: Content = {
       },
       {
         title: "IA générative",
-        items: ["LLMs · OpenAI", "LangChain", "RAG", "VectorStore · embeddings", "Prompt engineering"],
+        items: ["LLMs · OpenAI", "LangChain", "RAG", "VectorStore · embeddings", "Prompt engineering", "Développement agentique · Claude Code", "Cursor"],
       },
     ],
     methodsTitle: "Façon de travailler",
