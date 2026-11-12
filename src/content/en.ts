@@ -159,6 +159,7 @@ export const en: Content = {
             items: [
               "React templates and components bound to the Acoustic CMS",
               "Content access logic: deep links, temporary access",
+              "State management with Redux: store, slices, middleware, API wiring",
               "Responsive pages",
             ],
           },
@@ -171,7 +172,7 @@ export const en: Content = {
           },
         ],
         team: "8 people (project manager, tech lead, QA, 3 developers, 2 English-speaking stakeholders) · Agile",
-        stack: ["JavaScript", "React", "Next.js", "Acoustic CMS", "Jira", "Bitbucket", "Figma"],
+        stack: ["JavaScript", "React", "Next.js", "Redux", "Acoustic CMS", "Jira", "Bitbucket", "Figma"],
         url: "https://www.kyowakirinhub.com/en-gb",
       },
       {
@@ -196,9 +197,16 @@ export const en: Content = {
             title: "Back end",
             items: ["Data imports", "Business logic", "Application maintenance"],
           },
+          {
+            title: "Elasticsearch search (Cemedi project)",
+            items: [
+              "Data indexing with the ELK stack (Elasticsearch, Logstash, Kibana)",
+              "Search and filters",
+            ],
+          },
         ],
         team: "10 people (project manager, 3 QA, 6 developers) · Agile",
-        stack: ["Java", "Spring", "JSP", "Sockets", "Oracle", "PostgreSQL", "Git"],
+        stack: ["Java", "Spring", "JSP", "Sockets", "Oracle", "PostgreSQL", "Elasticsearch", "Logstash", "Kibana", "Git"],
         url: "https://www.bici.mg/page/",
       },
     ],
@@ -311,12 +319,12 @@ export const en: Content = {
     ],
     groups: [
       { title: "Languages", items: ["C#", "JavaScript", "TypeScript", "Java", "Python", "SQL · PL/SQL"] },
-      { title: "Front end", items: ["React", "Next.js", "Angular", "VueJS", "WPF · UWP"] },
+      { title: "Front end", items: ["React", "Next.js", "Redux", "Angular", "VueJS", "WPF · UWP"] },
       {
         title: "Back end",
         items: ["ASP.NET Core MVC · API", "Entity Framework", "Spring", "Node.js", "FastAPI · Flask", "REST · SOAP"],
       },
-      { title: "Data", items: ["SQL Server", "PostgreSQL", "Oracle", "SQLite"] },
+      { title: "Data", items: ["SQL Server", "PostgreSQL", "Oracle", "SQLite", "Elasticsearch · ELK"] },
       {
         title: "DevOps and tools",
         items: ["Azure Pipelines", "GitLab CI/CD", "Docker", "Kubernetes", "Git · TFS · Bitbucket", "Jira · Confluence"],

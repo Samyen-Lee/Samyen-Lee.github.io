@@ -5,4 +5,4 @@ next-env.d.ts
 *.tsbuildinfo
 .DS_Store
 .claude/
-/Samyen Lee - CV.*
+/Samyen Lee - CV*
