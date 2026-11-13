@@ -96,7 +96,7 @@ export const en: Content = {
       {
         id: "controlperfect",
         company: "Controlperfect",
-        role: "Fullstack / Vue.js Developer",
+        role: "Fullstack .NET / Vue.js Developer",
         employer: "Freelance · fully remote",
         period: "May 2026 — present",
         summary:
